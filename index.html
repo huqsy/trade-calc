@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Day Trading Helper</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Quick Day Trading Helper</h1>
+
+        <!-- Bulk Input Section -->
+        <div class="bulk-input">
+            <label for="bulkInput">Bulk Input:</label>
+            <textarea id="bulkInput" rows="6" placeholder="Stock Price
+            EMA (9), EMA (50)
+            MACD (Fast), MACD (Slow), MACD (Signal)
+            RSI
+            Bollinger (Top), Bollinger (Bottom)">
+        </textarea>
+            <button onclick="populateFields()">Populate Fields</button>
+        </div>
+
+        <!-- Individual Input Fields -->
+        <div class="input-fields">
+            <label for="stockPrice">Stock Price:</label>
+            <input type="number" id="stockPrice" step="0.01" placeholder="Enter Stock Price">
+
+            <label for="ema9">EMA (9):</label>
+            <input type="number" id="ema9" step="0.01" placeholder="Enter EMA (9)">
+
+            <label for="ema50">EMA (50):</label>
+            <input type="number" id="ema50" step="0.01" placeholder="Enter EMA (50)">
+
+            <label for="macdFast">MACD (Fast):</label>
+            <input type="number" id="macdFast" step="0.01" placeholder="Enter MACD (Fast)">
+
+            <label for="macdSlow">MACD (Slow):</label>
+            <input type="number" id="macdSlow" step="0.01" placeholder="Enter MACD (Slow)">
+
+            <label for="macdSignal">MACD (Signal):</label>
+            <input type="number" id="macdSignal" step="0.01" placeholder="Enter MACD (Signal)">
+
+            <label for="rsi">RSI:</label>
+            <input type="number" id="rsi" step="0.01" placeholder="Enter RSI">
+
+            <label for="bollingerTop">Bollinger (Top):</label>
+            <input type="number" id="bollingerTop" step="0.01" placeholder="Enter Bollinger Top">
+
+            <label for="bollingerBottom">Bollinger (Bottom):</label>
+            <input type="number" id="bollingerBottom" step="0.01" placeholder="Enter Bollinger Bottom">
+        </div>
+
+        <!-- Generate Recommendation Button -->
+        <button onclick="generateRecommendation()">Generate Recommendation</button>
+
+        <!-- Output Section -->
+        <div class="output">
+            <h2>Recommendation</h2>
+            <p id="recommendationOutput">Fill out the inputs to get a recommendation.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

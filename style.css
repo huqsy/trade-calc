@@ -1,0 +1,145 @@
+/* CSS for Day Trading Helper */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #e0e0e0, #f9f9f9);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    max-width: 600px;
+    width: 100%;
+    margin: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+input[type="number"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"]:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
+    transform: translateY(-2px);
+}
+
+.bulk-input textarea {
+    margin-top: 10px;
+}
+
+.output {
+    text-align: center;
+    font-size: 1.4em;
+    margin-top: 30px;
+}
+
+/* Recommendation Output Styling */
+#recommendationOutput {
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Color-coded Outputs */
+#recommendationOutput.buy {
+    color: #fff;
+    background: linear-gradient(135deg, #28a745, #218838);
+}
+
+#recommendationOutput.sell {
+    color: #fff;
+    background: linear-gradient(135deg, #dc3545, #c82333);
+}
+
+#recommendationOutput.hold {
+    color: #333;
+    background: linear-gradient(135deg, #ffc107, #e0a800);
+}
+
+/* General Utility Classes */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+/* Card Layout Styling */
+.card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-content {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+}
